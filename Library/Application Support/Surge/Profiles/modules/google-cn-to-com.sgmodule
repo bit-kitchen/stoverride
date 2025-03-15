@@ -1,0 +1,9 @@
+#!name=Google redirect CN to COM
+#!desc=Redirect www.google.cn to www.google.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.cn
+
+[URL Rewrite]
+^https?://www.google.cn/ https://www.google.com/ 302
