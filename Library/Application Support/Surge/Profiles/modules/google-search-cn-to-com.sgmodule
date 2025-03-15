@@ -1,0 +1,9 @@
+#!name=Google Search redirect CN to COM
+#!desc=Redirect www.google.cn/search to www.google.com/search
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.cn
+
+[URL Rewrite]
+^https?://www\.google\.cn/search\? https://www.google.com/search? 302
