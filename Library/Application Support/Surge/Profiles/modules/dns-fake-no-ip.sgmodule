@@ -1,0 +1,10 @@
+#!name=DNS Fake No IP
+#!desc=Make Surge to always return real IP addresses for all DNS queries
+#!category=DNS
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#always-real-ip
+always-real-ip = %INSERT% *
+
+# https://manual.nssurge.com/others/misc-options.html#hijack-dns
+hijack-dns = %INSERT% -*
