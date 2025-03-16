@@ -1,0 +1,9 @@
+#!name=微信图片外链修复
+#!desc=修复"此图片来自微信公众平台 未经允许不可引用"
+#!category=微信
+
+[MITM]
+hostname = %INSERT% mmbiz.qpic.cn
+
+[Header Rewrite]
+http-request ^https://mmbiz\.qpic\.cn/ header-del Referer
