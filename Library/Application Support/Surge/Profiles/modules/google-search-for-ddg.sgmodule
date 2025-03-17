@@ -1,0 +1,10 @@
+#!name=Google Search for ddg: www.duckduckgo.com
+#!desc=Prefix search query with "ddg " to search www.duckduckgo.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ddg -> www.duckduckgo.com
+^https?://www\.google\.com/search\?(?:.*&)?q=ddg(?:\+|%20)([^&]+).* https://duckduckgo.com/?q=$1 302

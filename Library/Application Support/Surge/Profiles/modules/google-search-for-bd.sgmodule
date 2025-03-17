@@ -1,0 +1,10 @@
+#!name=Google Search for bd: www.baidu.com
+#!desc=Prefix search query with "bd " to search www.baidu.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# bd -> www.baidu.com
+^https?://www\.google\.com/search\?(?:.*&)?q=bd(?:\+|%20)([^&]+).* https://www.baidu.com/s?wd=$1 302

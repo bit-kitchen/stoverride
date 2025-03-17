@@ -1,0 +1,10 @@
+#!name=Google Search for bing: www.bing.com
+#!desc=Prefix search query with "bing " to search www.bing.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# bing -> www.bing.com
+^https?://www\.google\.com/search\?(?:.*&)?q=bing(?:\+|%20)([^&]+).* https://www.bing.com/search?q=$1 302

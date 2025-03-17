@@ -1,0 +1,10 @@
+#!name=Google Search for yahoo: search.yahoo.com
+#!desc=Prefix search query with "yahoo " to search search.yahoo.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# yahoo -> search.yahoo.com
+^https?://www\.google\.com/search\?(?:.*&)?q=yahoo(?:\+|%20)([^&]+).* https://search.yahoo.com/search?p=$1 302
