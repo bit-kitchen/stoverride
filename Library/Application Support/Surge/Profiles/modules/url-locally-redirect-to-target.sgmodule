@@ -3,10 +3,14 @@
 #!category=URL
 
 [MITM]
-hostname = %INSERT% www.google.com, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me
+hostname = %INSERT% www.google.com, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me, *.mjt.lu
 
 [Script]
+# search param: url
 url-locally-redirect-to-target.js = type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,pattern=^https://www.google.com/url\?
 url-locally-redirect-to-target.js = type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,pattern=^https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html\?
 url-locally-redirect-to-target.js = type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,pattern=^https://.+.safelinks.protection.outlook.com/\?
 url-locally-redirect-to-target.js = type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,pattern=^https://t.me/iv\?
+
+# base64 encoded path segment
+url-locally-redirect-to-target.js = type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,pattern=^https://.+.mjt.lu/lnk/

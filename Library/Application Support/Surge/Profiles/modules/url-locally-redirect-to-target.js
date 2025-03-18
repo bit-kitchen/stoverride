@@ -4,10 +4,22 @@
 // https://www.o365atp.com/
 // https://github.com/newhouse/url-tracking-stripper/blob/master/assets/js/redirects.js
 
-const paramUrl = new URL($request.url).searchParams.get('url')
+const url = new URL($request.url)
+const paramUrl = url.searchParams.get('url')
 if (paramUrl) {
   // Redirect to the target URL directly without going through ATP safelinks.
   const targetUrl = decodeURIComponent(paramUrl)
+  $done({
+    response: {
+      status: 302,
+      headers: {
+        'Location': targetUrl,
+      },
+    },
+  })
+} else if (url.pathname.startsWith('/lnk/')) {
+  const segments = url.pathname.split('/')
+  const targetUrl = atob(segments[segments.length - 1])
   $done({
     response: {
       status: 302,
