@@ -1,0 +1,7 @@
+#!name=Surge Takeover Mode: Proxy + VIF
+#!desc=Take over the network with a proxy server, but the proxy uses the VIF address instead of the loopback address.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#compatibility-mode
+compatibility-mode = 4

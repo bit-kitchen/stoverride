@@ -1,0 +1,7 @@
+#!name=Surge Takeover Mode: Proxy Only
+#!desc=Take over the network with a proxy server, and do not use VIF.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#compatibility-mode
+compatibility-mode = 2

@@ -1,0 +1,7 @@
+#!name=Surge Takeover Mode: Default
+#!desc=Standard takeover mode, taking over the global network with a TUN device.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#compatibility-mode
+compatibility-mode = 3

@@ -1,0 +1,7 @@
+#!name=Surge Takeover Mode: Non-Default Route
+#!desc=Similar to the standard mode, but without configuring the TUN device as the default route, instead using several sub-route entries for takeover. This bypasses the issue where HomeKit Camera cannot connect in standard mode.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#compatibility-mode
+compatibility-mode = 5

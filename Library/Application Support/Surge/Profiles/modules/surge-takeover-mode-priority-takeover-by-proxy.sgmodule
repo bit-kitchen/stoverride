@@ -1,0 +1,7 @@
+#!name=Surge Takeover Mode: Priority Takeover by Proxy
+#!desc=Based on the standard takeover mode, configure the system proxy simultaneously to reduce additional overhead generated during takeover requests. However, some applications may refuse to work in proxy mode.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#compatibility-mode
+compatibility-mode = 1
