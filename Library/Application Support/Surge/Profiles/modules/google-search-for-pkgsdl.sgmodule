@@ -1,0 +1,10 @@
+#!name=Google Search for pkgsdl: pkgs.org/download/
+#!desc=Prefix search query with "pkgsdl " to search pkgs.org/download/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# pkgsdl -> pkgs.org/download/
+^https?://www\.google\.com/search\?(?:.*&)?q=pkgsdl(?:\+|%20)([^&]+).* https://pkgs.org/download/$1 302

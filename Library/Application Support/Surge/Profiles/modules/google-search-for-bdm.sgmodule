@@ -1,0 +1,10 @@
+#!name=Google Search for bdm: map.baidu.com
+#!desc=Prefix search query with "bdm " to search map.baidu.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# bdm -> map.baidu.com
+^https?://www\.google\.com/search\?(?:.*&)?q=bdm(?:\+|%20)([^&]+).* https://map.baidu.com/search?querytype=s&wd=$1 302

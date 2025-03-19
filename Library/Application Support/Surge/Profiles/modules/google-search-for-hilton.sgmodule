@@ -1,0 +1,10 @@
+#!name=Google Search for hilton: www.hilton.com/en/search/
+#!desc=Prefix search query with "hilton " to search www.hilton.com/en/search/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# hilton -> www.hilton.com/en/search/
+^https?://www\.google\.com/search\?(?:.*&)?q=hilton(?:\+|%20)([^&]+).* https://www.hilton.com/en/search/?query=$1 302

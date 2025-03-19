@@ -1,0 +1,10 @@
+#!name=Google Search for gm: www.google.com/maps/
+#!desc=Prefix search query with "gm " to search www.google.com/maps/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# gm -> www.google.com/maps/
+^https?://www\.google\.com/search\?(?:.*&)?q=gm(?:\+|%20)([^&]+).* https://www.google.com/maps/search/$1 302

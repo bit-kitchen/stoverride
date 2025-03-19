@@ -1,0 +1,10 @@
+#!name=Google Search for g: www.google.com
+#!desc=Prefix search query with "g " to search www.google.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# g -> www.google.com
+^https?://www\.google\.com/search\?(?:.*&)?q=g(?:\+|%20)([^&]+).* https://www.google.com/search?q=$1 302

@@ -1,0 +1,10 @@
+#!name=Google Search for zdic: www.zdic.net
+#!desc=Prefix search query with "zdic " to search www.zdic.net
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# zdic -> www.zdic.net
+^https?://www\.google\.com/search\?(?:.*&)?q=zdic(?:\+|%20)([^&]+).* https://www.zdic.net/hans/$1 302

@@ -1,0 +1,10 @@
+#!name=Google Search for jisho: jisho.org
+#!desc=Prefix search query with "jisho " to search jisho.org
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# jisho -> jisho.org
+^https?://www\.google\.com/search\?(?:.*&)?q=jisho(?:\+|%20)([^&]+).* https://jisho.org/search/$1 302

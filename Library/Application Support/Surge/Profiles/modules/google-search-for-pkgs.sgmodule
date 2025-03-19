@@ -1,0 +1,10 @@
+#!name=Google Search for pkgs: pkgs.org/search/
+#!desc=Prefix search query with "pkgs " to search pkgs.org/search/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# pkgs -> pkgs.org/search/
+^https?://www\.google\.com/search\?(?:.*&)?q=pkgs(?:\+|%20)([^&]+).* https://pkgs.org/search/?q=$1 302
