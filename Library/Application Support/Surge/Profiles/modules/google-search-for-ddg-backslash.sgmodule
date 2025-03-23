@@ -1,0 +1,10 @@
+#!name=Google Search for \: DuckDuckGo I'm feeling lucky
+#!desc=Prefix search query with "\" to search DuckDuckGo with I'm feeling lucky
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# \ -> www.duckduckgo.com/?q=%5C
+^https?://www\.google\.com/search\?(?:.*&)?q=(%5C[^&]+).* https://duckduckgo.com/?q=$1 302

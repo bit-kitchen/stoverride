@@ -1,0 +1,10 @@
+#!name=Google Search for !: DuckDuckGo Bangs
+#!desc=Prefix search query with "!" to search DuckDuckGo with Bangs. https://duckduckgo.com/bangs
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ! -> www.duckduckgo.com/?q=!
+^https?://www\.google\.com/search\?(?:.*&)?q=(![^&]+).* https://duckduckgo.com/?q=$1 302
