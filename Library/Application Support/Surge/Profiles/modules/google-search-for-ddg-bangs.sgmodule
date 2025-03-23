@@ -7,4 +7,4 @@ hostname = %INSERT% www.google.com
 
 [URL Rewrite]
 # ! -> www.duckduckgo.com/?q=!
-^https?://www\.google\.com/search\?(?:.*&)?q=(![^&]+).* https://duckduckgo.com/?q=$1 302
+^https?://www\.google\.com/search\?(?:.*&)?q=((!|%21)[^&]+).* https://duckduckgo.com/?q=$1 302
