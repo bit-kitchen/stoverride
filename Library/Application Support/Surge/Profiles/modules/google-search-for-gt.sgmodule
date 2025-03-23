@@ -1,0 +1,10 @@
+#!name=Google Search for gt: translate.google.com
+#!desc=Prefix search query with "gt " to search translate.google.com
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# gt -> translate.google.com
+^https?://www\.google\.com/search\?(?:.*&)?q=gt(?:\+|%20)([^&]+).* https://translate.google.com/?text=$1 302
