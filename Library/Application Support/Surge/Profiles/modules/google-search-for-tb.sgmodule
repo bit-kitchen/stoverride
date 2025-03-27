@@ -1,0 +1,10 @@
+#!name=Google Search for tb: https://s.taobao.com/search
+#!desc=Prefix search query with "tb " to search https://s.taobao.com/search
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# tb -> https://s.taobao.com/search
+^https?://www\.google\.com/search\?(?:.*&)?q=tb(?:\+|%20)([^&]+).* https://s.taobao.com/search?q=$1 302

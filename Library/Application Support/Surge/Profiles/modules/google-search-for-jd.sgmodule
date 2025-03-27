@@ -1,0 +1,10 @@
+#!name=Google Search for jd: https://search.jd.com/Search
+#!desc=Prefix search query with "jd " to search https://search.jd.com/Search
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# jd -> https://search.jd.com/Search
+^https?://www\.google\.com/search\?(?:.*&)?q=jd(?:\+|%20)([^&]+).* https://search.jd.com/Search?keyword=$1 302
