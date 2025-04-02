@@ -26,9 +26,12 @@ try {
 
 const url = new URL($request.url)
 
+console.log(`params: ${params}`)
 if (params.length) {
   for (const param of params) {
     const paramUrl = url.searchParams.get(param)
+    console.log(`param: ${param}, value: ${paramUrl}`)
+
     if (paramUrl) {
       // Redirect to the target URL directly without going through ATP safelinks.
       const targetUrl = decodeURIComponent(paramUrl)
