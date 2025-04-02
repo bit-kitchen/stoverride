@@ -9,8 +9,8 @@ hostname = %INSERT% www.youtube.com, duckduckgo.com, www.google.com, statics.tea
 # search param: q
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,argument=q,pattern=^https://www.youtube.com/redirect\?
 
-# search param: q,url
-url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,argument=q,url,pattern=^https://www.google.com/url\?
+# search param: q&url
+url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,argument=q&url,pattern=^https://www.google.com/url\?
 
 # search param: targetUrl
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target.js,argument=targetUrl,pattern=^https://triplink.trip.com/forward/middlepages/channel/edm\?

@@ -8,7 +8,7 @@
 
 let params = ['url']
 try {
-  params = $argument.split(',')
+  params = $argument.split('&')
 } catch (e) {
   // Ignore ReferenceError if argument not provided in sgmodule.
 }
@@ -17,7 +17,7 @@ try {
 try {
   $request
 } catch (e) {
-  params = process.argv[2] ? process.argv[2].split(',') : ['url']
+  params = process.argv[2] ? process.argv[2].split('&') : ['url']
   $request = {
     url: process.argv[3] || 'https://www.google.com/url?url=https://www.google.com/',
   }
