@@ -1,0 +1,19 @@
+#!name=Bookmarks for E-commerce CN
+#!desc=中国电商网站书签
+#!category=Bookmarks
+
+[MITM]
+hostname = %INSERT% jd, jdc, tb, tbc
+
+[URL Rewrite]
+# jd -> https://www.jd.com/
+^https?://jd/ https://www.jd.com/ 302
+
+# jdc -> https://cart.jd.com/cart_index
+^https?://jdc/ https://cart.jd.com/cart_index 302
+
+# tb -> https://www.taobao.com/
+^https?://tb/ https://www.taobao.com/ 302
+
+# tbc -> https://cart.taobao.com/
+^https?://tbc/ https://cart.taobao.com/ 302
