@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // https://manual.nssurge.com/scripting/common.html
 // https://manual.nssurge.com/scripting/http-request.html
 
@@ -9,6 +11,17 @@ try {
   param = $argument
 } catch (e) {
   // Ignore ReferenceError if argument not provided in sgmodule.
+}
+
+// Allow debugging using Node.js
+try {
+  $request
+} catch (e) {
+  param = process.argv[2] || 'url'
+  $request = {
+    url: process.argv[3] || 'https://www.google.com/url?url=https://www.google.com/',
+  }
+  $done = console.error
 }
 
 const url = new URL($request.url)
