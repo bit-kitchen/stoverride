@@ -8,3 +8,18 @@ hostname = %INSERT% www.google.com
 [URL Rewrite]
 # gt -> translate.google.com
 ^https?://www\.google\.com/search\?(?:.*&)?q=gt(?:\+|%20)([^&]+).* https://translate.google.com/?text=$1 302
+
+# gten -> translate.google.com/?sl=auto&tl=en
+^https?://www\.google\.com/search\?(?:.*&)?q=gten(?:\+|%20)([^&]+).* https://translate.google.com/?sl=auto&tl=en&text=$1 302
+
+# gtja -> translate.google.com/?sl=auto&tl=ja
+^https?://www\.google\.com/search\?(?:.*&)?q=gtja(?:\+|%20)([^&]+).* https://translate.google.com/?sl=auto&tl=ja&text=$1 302
+
+# gtko -> translate.google.com/?sl=auto&tl=ko
+^https?://www\.google\.com/search\?(?:.*&)?q=gtko(?:\+|%20)([^&]+).* https://translate.google.com/?sl=auto&tl=ko&text=$1 302
+
+# gttw -> translate.google.com/?sl=auto&tl=zh-TW
+^https?://www\.google\.com/search\?(?:.*&)?q=gttw(?:\+|%20)([^&]+).* https://translate.google.com/?sl=auto&tl=zh-TW&text=$1 302
+
+# gtzh -> translate.google.com/?sl=auto&tl=zh
+^https?://www\.google\.com/search\?(?:.*&)?q=gtzh(?:\+|%20)([^&]+).* https://translate.google.com/?sl=auto&tl=zh&text=$1 302
