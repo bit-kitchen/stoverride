@@ -4,7 +4,13 @@
 // https://www.o365atp.com/
 // https://github.com/newhouse/url-tracking-stripper/blob/master/assets/js/redirects.js
 
-const param = $argument || 'url'
+let param = 'url'
+try {
+  param = $argument
+} catch (e) {
+  // Ignore ReferenceError if argument not provided in sgmodule.
+}
+
 const url = new URL($request.url)
 const paramUrl = url.searchParams.get(param)
 if (paramUrl) {
