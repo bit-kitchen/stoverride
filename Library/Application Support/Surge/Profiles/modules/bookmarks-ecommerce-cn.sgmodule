@@ -3,7 +3,7 @@
 #!category=Bookmarks
 
 [MITM]
-hostname = %INSERT% jd, jdc, jdo, tb, tbc, tbo
+hostname = %INSERT% jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
 
 [URL Rewrite]
 # 京东
@@ -15,3 +15,8 @@ hostname = %INSERT% jd, jdc, jdo, tb, tbc, tbo
 ^https?://tb/ https://www.taobao.com/ 302
 ^https?://tbc/ https://cart.taobao.com/ 302
 ^https?://tbo/ https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm 302
+
+# 小米有品
+^https?://yp/ https://www.xiaomiyoupin.com/ 302
+^https?://ypc/ https://trade.xiaomiyoupin.com/tr/cart 302
+^https?://ypo/ https://www.xiaomiyoupin.com/personal-center/orders#all 302
