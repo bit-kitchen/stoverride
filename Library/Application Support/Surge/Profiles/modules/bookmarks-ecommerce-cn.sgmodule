@@ -3,17 +3,15 @@
 #!category=Bookmarks
 
 [MITM]
-hostname = %INSERT% jd, jdc, tb, tbc
+hostname = %INSERT% jd, jdc, jdo, tb, tbc, tbo
 
 [URL Rewrite]
-# jd -> https://www.jd.com/
+# 京东
 ^https?://jd/ https://www.jd.com/ 302
-
-# jdc -> https://cart.jd.com/cart_index
 ^https?://jdc/ https://cart.jd.com/cart_index 302
+^https?://jdo/ https://order.jd.com/center/list.action 302
 
-# tb -> https://www.taobao.com/
+# 淘宝
 ^https?://tb/ https://www.taobao.com/ 302
-
-# tbc -> https://cart.taobao.com/
 ^https?://tbc/ https://cart.taobao.com/ 302
+^https?://tbo/ https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm 302
