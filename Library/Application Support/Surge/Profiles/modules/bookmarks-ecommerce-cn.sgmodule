@@ -3,9 +3,14 @@
 #!category=Bookmarks
 
 [MITM]
-hostname = %INSERT% jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
+hostname = %INSERT% as, asc, aso, jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
 
 [URL Rewrite]
+# Apple Store
+^https?://as/ https://www.apple.com.cn/store 302
+^https?://asc/ https://www.apple.com.cn/shop/bag 302
+^https?://aso/ https://www.apple.com.cn/shop/order/list 302
+
 # 京东
 ^https?://jd/ https://www.jd.com/ 302
 ^https?://jdc/ https://cart.jd.com/cart_index 302
