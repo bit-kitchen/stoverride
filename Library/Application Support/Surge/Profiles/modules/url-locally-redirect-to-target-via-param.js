@@ -25,6 +25,7 @@ try {
 }
 
 const url = new URL($request.url)
+let targetUrl
 
 console.log(`params: ${params}`)
 for (const param of params) {
@@ -32,15 +33,22 @@ for (const param of params) {
   console.log(`param: ${param}, value: ${paramUrl}`)
 
   if (paramUrl) {
-    // Redirect to the target URL directly without going through ATP safelinks.
-    const targetUrl = decodeURIComponent(paramUrl)
-    $done({
-      response: {
-        status: 302,
-        headers: {
-          'Location': targetUrl,
-        },
-      },
-    })
+    targetUrl = decodeURIComponent(paramUrl)
+    break
   }
+}
+
+if (targetUrl) {
+  // Redirect to the target URL directly without going through intermediate URL.
+  $done({
+    response: {
+      status: 302,
+      headers: {
+        'Location': targetUrl,
+      },
+    },
+  })
+} else {
+  // No target URL found, keep the request untouched.
+  $done({})
 }
