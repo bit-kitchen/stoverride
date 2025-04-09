@@ -1,0 +1,10 @@
+#!name=Google Search for jdo: https://order.jd.com/center/search.action
+#!desc=Prefix search query with "jdo " to search https://order.jd.com/center/search.action
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# jdo -> https://order.jd.com/center/search.action
+^https?://www\.google\.com/search\?(?:.*&)?q=jdo(?:\+|%20)([^&]+).* https://order.jd.com/center/search.action?keyword=$1 302
