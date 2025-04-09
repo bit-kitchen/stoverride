@@ -2,6 +2,9 @@
 #!desc=中国电商网站书签
 #!category=Bookmarks
 
+[General]
+always-real-ip = %INSERT% -as, -asc, -aso, -jd, -jdc, -jdo, -tb, -tbc, -tbo, -yp, -ypc, -ypo
+
 [MITM]
 hostname = %INSERT% as, asc, aso, jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
 
