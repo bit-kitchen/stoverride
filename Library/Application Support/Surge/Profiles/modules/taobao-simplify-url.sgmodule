@@ -1,0 +1,14 @@
+#!name=Taobao Simplify URL
+#!desc=简化淘宝商品链接，方便分享。
+#!category=Taobao
+
+[General]
+# https://manual.nssurge.com/others/host-list.html
+# https://manual.nssurge.com/others/misc-options.html#always-real-ip
+always-real-ip = %INSERT% -item.taobao.com
+
+[MITM]
+hostname = %INSERT% item.taobao.com
+
+[URL Rewrite]
+^https://item\.taobao\.com/item\.htm\?.*&id=([^&]+).* https://item.taobao.com/item.htm?id=$1 302
