@@ -11,5 +11,8 @@ always-real-ip = %INSERT% -item.taobao.com, -detail.tmall.com
 hostname = %INSERT% item.taobao.com, detail.tmall.com
 
 [URL Rewrite]
+^https://item\.taobao\.com/item\.htm\?.*&id=([^&]+).*?&skuId=([^&]+).* https://item.taobao.com/item.htm?id=$1&skuId=$2 302
+^https://detail\.tmall\.com/item\.htm\?.*&id=([^&]+).*?&skuId=([^&]+).* https://detail.tmall.com/item.htm?id=$1&skuId=$2 302
+
 ^https://item\.taobao\.com/item\.htm\?.*&id=([^&]+).* https://item.taobao.com/item.htm?id=$1 302
 ^https://detail\.tmall\.com/item\.htm\?.*&id=([^&]+).* https://detail.tmall.com/item.htm?id=$1 302
