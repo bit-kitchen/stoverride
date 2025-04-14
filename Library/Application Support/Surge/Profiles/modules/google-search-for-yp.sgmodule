@@ -1,0 +1,10 @@
+#!name=Google Search for yp: www.xiaomiyoupin.com
+#!desc=Prefix search query with "yp " to search https://www.xiaomiyoupin.com/search
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# yp -> https://www.xiaomiyoupin.com/search
+^https?://www\.google\.com/search\?(?:.*&)?q=yp(?:\+|%20)([^&]+).* https://www.xiaomiyoupin.com/search?keyword=$1 302
