@@ -1,0 +1,10 @@
+#!name=Google Search for ipinfo: ipinfo.io
+#!desc=Prefix search query with "ipinfo " to search https://ipinfo.io/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ipinfo -> https://ipinfo.io/
+^https?://www\.google\.com/search\?(?:.*&)?q=ipinfo(?:\+|%20)([^&]+).* https://ipinfo.io/$1 302
