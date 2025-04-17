@@ -1,0 +1,10 @@
+#!name=Google Search for xhs: www.xiaohongshu.com
+#!desc=Prefix search query with "xhs " to search https://www.xiaohongshu.com/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# xhs -> https://www.xiaohongshu.com/
+^https?://www\.google\.com/search\?(?:.*&)?q=xhs(?:\+|%20)([^&]+).* https://www.xiaohongshu.com/search_result/?keyword=$1 302
