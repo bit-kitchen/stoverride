@@ -1,0 +1,13 @@
+#!name=Bookmarks for IP
+#!desc=Bookmarks for getting self IP.
+#!category=Bookmarks
+
+[General]
+always-real-ip = %INSERT% -ipinfo
+
+[MITM]
+hostname = %INSERT% ipinfo
+
+[URL Rewrite]
+# IPinfo
+^https?://ipinfo/ https://ipinfo.io/what-is-my-ip 302
