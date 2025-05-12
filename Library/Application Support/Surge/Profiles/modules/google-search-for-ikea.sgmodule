@@ -1,0 +1,10 @@
+#!name=Google Search for ikea: www.ikea.cn
+#!desc=Prefix search query with "ikea " to search https://www.ikea.cn/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ikea -> https://www.ikea.cn/
+^https?://www\.google\.com/search\?(?:.*&)?q=ikea(?:\+|%20)([^&]+).* https://www.ikea.cn/cn/zh/search/products/?q=$1&qtype=search_keywords 302
