@@ -3,16 +3,21 @@
 #!category=Bookmarks
 
 [General]
-always-real-ip = %INSERT% -as, -asc, -aso, -jd, -jdc, -jdo, -tb, -tbc, -tbo, -yp, -ypc, -ypo
+always-real-ip = %INSERT% -as, -asc, -aso, -ikea, -ikeac, -ikeao, -jd, -jdc, -jdo, -tb, -tbc, -tbo, -yp, -ypc, -ypo
 
 [MITM]
-hostname = %INSERT% as, asc, aso, jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
+hostname = %INSERT% as, asc, aso, ikea, ikeac, ikeao, jd, jdc, jdo, tb, tbc, tbo, yp, ypc, ypo
 
 [URL Rewrite]
 # Apple Store
 ^https?://as/ https://www.apple.com.cn/store 302
 ^https?://asc/ https://www.apple.com.cn/shop/bag 302
 ^https?://aso/ https://www.apple.com.cn/shop/order/list 302
+
+# IKEA
+^https?://ikea/ https://www.ikea.cn/ 302
+^https?://ikeac/ https://www.ikea.cn/cn/zh/pay/cart/ 302
+^https?://ikeao/ https://www.ikea.cn/cn/zh/apps/order/order-list/ 302
 
 # 京东
 ^https?://jd/ https://www.jd.com/ 302
