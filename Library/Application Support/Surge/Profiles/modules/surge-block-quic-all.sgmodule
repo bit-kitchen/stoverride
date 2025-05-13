@@ -1,0 +1,7 @@
+#!name=Surge block-quic: all
+#!desc=Overrides all policies' block-quic parameters, blocking everything including DIRECT policies.
+#!category=Surge
+
+[General]
+# https://manual.nssurge.com/others/misc-options.html#block-quic-ios-5146-mac-5103
+block-quic = all
