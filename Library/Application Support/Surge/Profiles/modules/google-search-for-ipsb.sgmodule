@@ -1,0 +1,10 @@
+#!name=Google Search for IP.SB
+#!desc=Prefix search query with "ip.sb " to search https://ip.sb/ip/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ipsb -> https://ip.sb/ip/
+^https?://www\.google\.com/search\?(?:.*&)?q=ipsb(?:\+|%20)([^&]+).* https://ip.sb/ip/$1 302
