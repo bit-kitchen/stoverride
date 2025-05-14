@@ -1,8 +1,8 @@
 #!name=Fake IP for gstatic
-#!desc=对 gstatic 相关域名启用 Fake IP 以避免解析成无法正常提供服务的 CN 服务器。
+#!desc=对 gstatic 相关域名启用 Fake IP 以避免解析为 CN 服务器，而又触发代理规则而无法正常访问。
 #!category=DNS
 
 [General]
 # https://manual.nssurge.com/others/host-list.html
 # https://manual.nssurge.com/others/misc-options.html#always-real-ip
-always-real-ip = %INSERT% -fonts.gstatic.com, -www.gstatic.com
+always-real-ip = %INSERT% -fonts.gstatic.com, -ssl.gstatic.com, -www.gstatic.com
