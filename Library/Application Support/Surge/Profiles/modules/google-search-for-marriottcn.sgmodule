@@ -1,0 +1,10 @@
+#!name=Google Search for marriottcn: www.marriott.com.cn
+#!desc=Prefix search query with "marriottcn " to search www.marriott.com.cn
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# marriottcn -> www.marriott.com.cn
+^https?://www\.google\.com/search\?(?:.*&)?q=marriottcn(?:\+|%20)([^&]+).* https://www.marriott.com.cn/search/findHotels.mi?destinationAddress.destination=$1 302
