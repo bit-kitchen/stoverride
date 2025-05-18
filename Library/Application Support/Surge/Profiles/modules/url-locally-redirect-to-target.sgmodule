@@ -3,7 +3,7 @@
 #!category=URL
 
 [MITM]
-hostname = %INSERT% www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu
+hostname = %INSERT% www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net
 
 [Script]
 # search param: q
@@ -11,6 +11,9 @@ url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview
 
 # search param: q&url
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=q&url,pattern=^https://www.google.com/url\?
+
+# search param: target
+url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=target,pattern=^https://link.csdn.net/\?
 
 # search param: targetUrl
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=targetUrl,pattern=^https://triplink.trip.com/forward/middlepages/channel/edm\?
