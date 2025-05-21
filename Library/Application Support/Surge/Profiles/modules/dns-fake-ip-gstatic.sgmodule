@@ -5,8 +5,9 @@
 [General]
 # https://manual.nssurge.com/others/host-list.html
 # https://manual.nssurge.com/others/misc-options.html#always-real-ip
-always-real-ip = %INSERT% -fonts.gstatic.com, -ssl.gstatic.com, -www.gstatic.com
+always-real-ip = %INSERT% -fonts.googleapis.com, -fonts.gstatic.com, -ssl.gstatic.com, -www.gstatic.com
 
 [Rule]
 # Beijing Gu Xiang Information Technology Co.,Ltd.
+AND,((IP-ASN,24424,no-resolve),(DOMAIN-SUFFIX,googleapis.com)),DIRECT
 AND,((IP-ASN,24424,no-resolve),(DOMAIN-SUFFIX,gstatic.com)),DIRECT
