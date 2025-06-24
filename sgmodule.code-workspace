@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "stoverride",
+			"path": "./Library/Application Support/Stash/Documents/local/override"
+		},
+		{
+			"name": "~/Library/Application Support/Stash",
+			"path": "../../../Library/Application Support/Stash"
+		},
+		{
+			"name": "sgmodule",
+			"path": "./Library/Application Support/Surge/Profiles/modules"
+		},
+		{
+			"name": "~/Library/Application Support/Surge",
+			"path": "../../../Library/Application Support/Surge"
+		},
+		{
+			"name": "~/Library/Application Support/com.nssurge.surge-mac",
+			"path": "../../../Library/Application Support/com.nssurge.surge-mac"
+		},
+		{
+			"name": "~/Library/Logs/Surge",
+			"path": "../../../Library/Logs/Surge"
+		},
+		{
+			"name": "/tmp",
+			"path": "/tmp"
+		}
+	],
+	"settings": {}
+}
