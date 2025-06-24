@@ -3,7 +3,7 @@
 #!category=URL
 
 [MITM]
-hostname = %INSERT% www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, i.gkd.li
+hostname = %INSERT% www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, www.google.com.hk, statics.teams.cdn.office.net, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, i.gkd.li
 
 [Script]
 # search param: q
@@ -11,6 +11,7 @@ url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview
 
 # search param: q&url
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=q&url,pattern=^https://www.google.com/url\?
+url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=q&url,pattern=^https://www.google.com.hk/url\?
 
 # search param: target
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=target,pattern=^https://link.csdn.net/\?
