@@ -1,0 +1,11 @@
+name: 微信图片外链修复
+desc: 修复"此图片来自微信公众平台 未经允许不可引用"
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/WeChat.png
+category: 微信
+
+http:
+  mitm:
+    - "mmbiz.qpic.cn"
+
+  header-rewrite:
+    - ^https://mmbiz\.qpic\.cn/ request-del Referer
