@@ -1,0 +1,9 @@
+name: DNS 使用 Google 公共 DNS (TCP协议)
+desc: 使用 Google 公共 DNS 解析 DNS 记录
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google.png
+category: DNS
+
+dns:
+  nameserver: #!replace
+    - tcp://8.8.8.8
+    - tcp://8.8.4.4

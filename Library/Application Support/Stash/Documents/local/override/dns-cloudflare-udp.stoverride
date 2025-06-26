@@ -1,0 +1,9 @@
+name: DNS 使用 Cloudflare 公共 DNS (UDP协议)
+desc: 使用 Cloudflare 公共 DNS 解析 DNS 记录
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Cloudflare.png
+category: DNS
+
+dns:
+  nameserver: #!replace
+    - 1.1.1.1
+    - 1.0.0.1
