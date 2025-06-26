@@ -1,0 +1,93 @@
+name: URL Locally Redirect to Target
+desc: Locally redirect to the target URL directly without going through the redirect link.
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Bypass.png
+category: URL
+
+http:
+  mitm:
+    - "*.mjt.lu"
+    - "*.safelinks.protection.outlook.com"
+    - duckduckgo.com
+    - go.hoteldig.com
+    - i.gkd.li
+    - link.csdn.net
+    - statics.teams.cdn.office.net
+    - t.me
+    - triplink.trip.com
+    - www.google.com
+    - www.google.com.hk
+    - www.youtube.com
+
+  script:
+    # search param: q
+    - match: ^https://www.youtube.com/redirect\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: q
+
+    # search param: q&url
+    - match: ^https://www.google.com/url\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: q&url
+
+    - match: ^https://www.google.com.hk/url\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: q&url
+
+    # search param: target
+    - match: ^https://link.csdn.net/\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: target
+
+    # search param: targetUrl
+    - match: ^https://triplink.trip.com/forward/middlepages/channel/edm\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: targetUrl
+
+    # search param: uddg
+    - match: ^https://duckduckgo.com/l/\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: uddg
+
+    # search param: url
+    - match: ^https://go.hoteldig.com/\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: url
+
+    - match: ^https://statics.teams.cdn.office.net/evergreen-assets/safelinks/1/atp-safelinks.html\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: url
+
+    - match: ^https://.+.safelinks.protection.outlook.com/\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: url
+
+    - match: ^https://t.me/iv\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: url
+
+    - match: ^https://i.gkd.li/i\?
+      name: url-locally-redirect-to-target-via-param
+      type: request
+      argument: url
+
+    # base64 encoded path segment
+    - match: ^https://.+.mjt.lu/lnk/
+      name: url-locally-redirect-to-target-via-path
+      type: request
+
+script-providers:
+  url-locally-redirect-to-target-via-param:
+    url: https://raw.githubusercontent.com/bit-kitchen/stoverride/main/Library/Application%20Support/Stash/Documents/local/override/url-locally-redirect-to-target-via-param.js
+
+  url-locally-redirect-to-target-via-path:
+    url: https://raw.githubusercontent.com/bit-kitchen/stoverride/main/Library/Application%20Support/Stash/Documents/local/override/url-locally-redirect-to-target-via-path.js
