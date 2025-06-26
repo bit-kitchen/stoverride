@@ -1,0 +1,6 @@
+name: "log-level: debug"
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Final.png
+category: Stash
+
+# silent / info / warning / error / debug
+log-level: debug
