@@ -1,0 +1,15 @@
+name: fake-ip-filter
+desc: 解析 LAN, NTP, STUN 等域名为真实 IP
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Direct.png
+category: DNS
+
+dns:
+  fake-ip-filter:
+    - rule-set:fake-ip-filter
+
+rule-providers:
+  # https://linux.do/t/topic/563567
+  fake-ip-filter:
+    behavior: domain
+    format: text
+    url: https://cdn.jsdelivr.net/gh/juewuy/ShellCrash@dev/public/fake_ip_filter.list
