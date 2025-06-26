@@ -1,0 +1,11 @@
+name: DNS 修复空记录
+desc: 修复 DNS 解析空记录
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Dinosaur.png
+category: DNS
+
+# https://boce.aliyun.com/detect/dns
+# https://toolbox.googleapps.com/apps/dig/
+
+dns:
+  nameserver-policy:
+    token.safebrowsing.apple: 1.1.1.1
