@@ -1,0 +1,10 @@
+#!name=Imgur Direct Link
+#!desc=Imgur 图片直接链接
+#!category=Imgur
+
+[MITM]
+hostname = %INSERT% i.imgur.com
+
+[Header Rewrite]
+http-request ^https://i\.imgur\.com/ header-del Referer
+http-request ^https://i\.imgur\.com/ header-add Referer https://imgur.com/
