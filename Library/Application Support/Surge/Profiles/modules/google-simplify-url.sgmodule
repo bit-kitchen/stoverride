@@ -1,0 +1,15 @@
+#!name=Google Simplify URL
+#!desc=简化 Google 搜索结果链接，方便分享。
+#!category=Google
+
+[General]
+# https://manual.nssurge.com/others/host-list.html
+# https://manual.nssurge.com/others/misc-options.html#always-real-ip
+always-real-ip = %INSERT% -www.google.com
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+^https://www\.google\.com/search\?q=([^&]+)&.* https://www.google.com/search?q=$1 302
+^https://www\.google\.com/search\?.*&q=([^&]+).* https://www.google.com/search?q=$1 302
