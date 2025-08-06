@@ -10,6 +10,5 @@ always-real-ip = %INSERT% -www.google.com
 [MITM]
 hostname = %INSERT% www.google.com
 
-[URL Rewrite]
-^https://www\.google\.com/search\?q=([^&]+)&.* https://www.google.com/search?q=$1 302
-^https://www\.google\.com/search\?.*&q=([^&]+).* https://www.google.com/search?q=$1 302
+[Script]
+google-simplify-url.js = debug=false,type=http-request,engine=webview,script-path=modules/google-simplify-url.js,pattern=^https://www.google.com/search\?
