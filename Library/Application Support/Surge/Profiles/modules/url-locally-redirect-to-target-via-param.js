@@ -33,7 +33,7 @@ for (const param of params) {
   console.log(`param: ${param}, value: ${paramUrl}`)
 
   if (paramUrl) {
-    targetUrl = decodeURIComponent(paramUrl)
+    targetUrl = paramUrl
     break
   }
 }
