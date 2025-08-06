@@ -24,6 +24,12 @@ try {
   $done = console.error
 }
 
+// Redirect is not allowed for a preflight request
+if ($request.method === 'OPTIONS') {
+  $done({})
+}
+
+// Get the target URL from the request URL
 const url = new URL($request.url)
 let targetUrl
 
