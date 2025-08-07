@@ -1,0 +1,10 @@
+#!name=Google Search for ojad: www.gavo.t.u-tokyo.ac.jp/ojad/
+#!desc=Prefix search query with "ojad " to search https://www.gavo.t.u-tokyo.ac.jp/ojad/
+#!category=Google
+
+[MITM]
+hostname = %INSERT% www.google.com
+
+[URL Rewrite]
+# ojad -> https://www.gavo.t.u-tokyo.ac.jp/ojad/search/index/word:
+^https?://www\.google\.com/search\?(?:.*&)?q=ojad(?:\+|%20)([^&]+).* https://www.gavo.t.u-tokyo.ac.jp/ojad/search/index/word:$1 302
