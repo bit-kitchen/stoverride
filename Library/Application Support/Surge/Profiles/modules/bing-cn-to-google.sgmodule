@@ -1,0 +1,9 @@
+#!name=Bing CN to Google
+#!desc=Redirect cn.bing.com/search to www.google.com/search
+#!category=Bing
+
+[MITM]
+hostname = %INSERT% cn.bing.com
+
+[URL Rewrite]
+^https?://cn\.bing\.com/search\? https://www.google.com/search? 302
