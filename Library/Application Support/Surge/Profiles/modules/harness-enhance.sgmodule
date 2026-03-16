@@ -5,7 +5,9 @@
 [General]
 # https://manual.nssurge.com/others/host-list.html
 # https://manual.nssurge.com/others/misc-options.html#always-real-ip
-always-real-ip = %INSERT% -*.harness.io, -proxy-free.ff.harness.io
+
+# Use real IP for app.harness.io to avoid cert error in harness-delegate.
+always-real-ip = %INSERT% app.harness.io, -*.harness.io, -proxy-free.ff.harness.io
 
 [MITM]
 hostname = %INSERT% *.harness.io, proxy-free.ff.harness.io
