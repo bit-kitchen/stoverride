@@ -1,0 +1,9 @@
+#!name=iCloud Contacts Drop Non-Existent Domains
+#!desc=Drop requests to non-existent domains for iCloud Contacts Sync
+#!category=Apple
+
+[Rule]
+# AddressBookSourceSync
+# empty DNS, block to avoid excessive error logging
+DOMAIN,p213-contacts.icloud.com,REJECT
+DOMAIN,p235-contacts.icloud.com,REJECT
