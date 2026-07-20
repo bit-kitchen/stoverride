@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // https://manual.nssurge.com/scripting/common.html
 // https://manual.nssurge.com/scripting/http-request.html
 
