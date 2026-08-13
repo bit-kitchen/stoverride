@@ -3,7 +3,7 @@
 #!category=URL
 
 [MITM]
-hostname = %INSERT% developers.weixin.qq.com, mp.weixin.qq.com, www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, www.google.com.hk, statics.teams.cdn.office.net, teams.public.onecdn.static.microsoft, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, link.zhihu.com, i.gkd.li, www.linkedin.com
+hostname = %INSERT% developers.weixin.qq.com, mp.weixin.qq.com, www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, www.google.com.hk, statics.teams.cdn.office.net, teams.public.onecdn.static.microsoft, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, link.zhihu.com, i.gkd.li, www.linkedin.com, *.awstrack.me
 
 [Script]
 # search param: href
@@ -39,3 +39,6 @@ url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview
 
 # base64 encoded path segment
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-path-base64.js,pattern=^https://.+.mjt.lu/lnk/
+
+# URI Component encoded path segment
+url-locally-redirect-to-target.js = debug=true,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-path.js,pattern=^https://.+.awstrack.me/L0/
