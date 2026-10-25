@@ -3,9 +3,12 @@
 #!category=URL
 
 [MITM]
-hostname = %INSERT% developers.weixin.qq.com, mp.weixin.qq.com, www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, www.google.com.hk, statics.teams.cdn.office.net, teams.public.onecdn.static.microsoft, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, link.zhihu.com, i.gkd.li, www.linkedin.com, *.awstrack.me
+hostname = %INSERT% nam.safelink.emails.azure.net, developers.weixin.qq.com, mp.weixin.qq.com, www.youtube.com, duckduckgo.com, go.hoteldig.com, www.google.com, www.google.com.hk, statics.teams.cdn.office.net, teams.public.onecdn.static.microsoft, *.safelinks.protection.outlook.com, t.me, triplink.trip.com, *.mjt.lu, link.csdn.net, link.zhihu.com, i.gkd.li, www.linkedin.com, *.awstrack.me
 
 [Script]
+# search param: destination
+url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=destination,pattern=^https://nam.safelink.emails.azure.net/redirect/\?
+
 # search param: href
 url-locally-redirect-to-target.js = debug=false,type=http-request,engine=webview,script-path=modules/url-locally-redirect-to-target-via-param.js,argument=href,pattern=^https://developers.weixin.qq.com/community/middlepage/href\?
 
